@@ -2,7 +2,7 @@ version: '3.1'
 
 services:
   springboot:
-    image: aretimadhusudhan/spring-boot-mongo:buildnumber
+    image: aretimadhusudhan/spring-boot-mongo:bulidnumber
     environment:
     - MONGO_DB_HOSTNAME=mongodb
     - MONGO_DB_USERNAME=madhu
