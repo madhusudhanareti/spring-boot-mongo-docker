@@ -2,7 +2,7 @@ version: '3.1'
 
 services:
   springboot:
-    image: aretimadhusudhan/spring-boot-mongo:latest
+    image: aretimadhusudhan/spring-boot-mongo:1
     environment:
     - MONGO_DB_HOSTNAME=mongodb
     - MONGO_DB_USERNAME=madhu
@@ -13,7 +13,7 @@ services:
     depends_on:
       - mongodb
     networks:
-    - awsbridgenetwork 
+    - aws
 
   mongodb:
     image: mongo
@@ -21,15 +21,15 @@ services:
     - MONGO_INITDB_ROOT_USERNAME=madhu
     - MONGO_INITDB_ROOT_PASSWORD=madhu123
     volumes:
-      - madhu:/data/db
+      - aws:/data/db
     restart: always
     networks:
-    - awsbridge
+    - aws
     
 volumes:
-  madhu:
+  aws:
     external: true
     
 networks:
-  awsbridge:
+  aws:
     external: true
