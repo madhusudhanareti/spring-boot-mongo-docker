@@ -28,8 +28,8 @@ services:
     
 volumes:
   aws:
-    external: true
+    external: false
     
 networks:
   aws:
-    external: true
+    external: false
